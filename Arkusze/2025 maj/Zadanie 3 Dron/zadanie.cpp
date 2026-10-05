@@ -42,15 +42,6 @@ void ZnajdzTrojke(vector<pair<int,int>> vect){
                 int xxx = ppp.first;
                 int yyy = ppp.second;
 
-<<<<<<< HEAD
-                if(x != xx && x != xxx && y != yy && y != yyy){ //zeby nie bralo tego samego puntktu
-                    if(abs(x - xx) == abs(xx - xxx) && abs(y - yy) == abs(yy -yyy)){ //rowna odleglosc
-
-                        if(!VectorContains(wypisaneX, x) && !VectorContains(wypisaneY, y) && 
-                        !VectorContains(wypisaneX, xx) && !VectorContains(wypisaneY, yy) &&
-                        !VectorContains(wypisaneX, xxx) && !VectorContains(wypisaneY, yyy)
-                        //Sprawdza czy juz wypisal dane 3 punkty (jest tylko jedna trojka z poleceniea)
-=======
                 if(x != xx && x != xxx && y != yy && y != yyy){
                     if(abs(x - xx) == abs(xx - xxx) &&
                         abs(y - yy) == abs(yy -yyy)
@@ -58,7 +49,6 @@ void ZnajdzTrojke(vector<pair<int,int>> vect){
                         if(!VectorContains(wypisaneX, x) && !VectorContains(wypisaneY, y) && 
                         !VectorContains(wypisaneX, xx) && !VectorContains(wypisaneY, yy) &&
                         !VectorContains(wypisaneX, xxx) && !VectorContains(wypisaneY, yyy)
->>>>>>> e89f9fe5389e9a8cf55d14880e8f5ed74c06f255
                         //JESTEM DOSLOWNIE TERRY DAVIS
                     ){
                             wypisaneX.push_back(x);
