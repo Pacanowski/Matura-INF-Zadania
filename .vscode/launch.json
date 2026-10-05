@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/krzys/Documents/Matura-INF-Zadania/Arkusze/2025 maj/Zadanie 3 Dron",
-      "program": "c:/Users/krzys/Documents/Matura-INF-Zadania/Arkusze/2025 maj/Zadanie 3 Dron/build/Debug/outDebug",
+      "cwd": "c:/Users/krzys/Documents/Matura-INF-Zadania/Arkusze/2025 czerwiec/Zadanie 3",
+      "program": "c:/Users/krzys/Documents/Matura-INF-Zadania/Arkusze/2025 czerwiec/Zadanie 3/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
