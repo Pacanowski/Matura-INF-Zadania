@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/krzys/Documents/Matura-INF-Zadania/Arkusze/2024 maj/Zadanie 4",
-      "program": "c:/Users/krzys/Documents/Matura-INF-Zadania/Arkusze/2024 maj/Zadanie 4/build/Debug/outDebug",
+      "cwd": "c:/Users/krzys/Documents/Matura-INF-Zadania/Arkusze/2024 czerwiec/Zadanie 3",
+      "program": "c:/Users/krzys/Documents/Matura-INF-Zadania/Arkusze/2024 czerwiec/Zadanie 3/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
