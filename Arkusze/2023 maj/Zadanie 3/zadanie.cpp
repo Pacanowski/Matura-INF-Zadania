@@ -51,44 +51,6 @@ bool CzyJestCiagiemSzesc(int vect[9999], int s){
 
 }
 
-bool CzyRosnie(int vect[9999], int start){
-
-    for(int i = start; i + 1 <= 9999; i++){
-        if(vect[i] < vect[i + 1]) return true;
-    }
-
-    return false;
-
-}
-
-bool CzyMaleje(int vect[9999], int start){
-    int koniec = 0;
-    for(int i = start; i + 1 <= 9999; i++){
-        if(vect[i] > vect[i + 1]) koniec = i+1;
-    }
-    return koniec;
-
-}
-
-pair<string, int> CzyJestCiagiem(int vect[9999], int start){
-    pair<string, int> empty = pair("0", 0);
-
-    string ciag;
-
-    int k = CzyRosnie(vect, start); //pozycja gdzie ostatni rosnacy element
-    if(k == 0) return empty; //czy w ogole rosl
-
-    int p = CzyMaleje(vect, k + 1); //pozycja gdzie sie konczy malejacy
-    if(p == 0) return empty; // czy w ogole zaczelo malec
-
-        
-    cout<<" ===== Ciag ====="<<endl;
-    cout<<start<<endl;
-    cout<<ciag<<endl;
-
-    return pair(ciag, start);
-}
-
 int main(){
 
     fstream plik("pi.txt");
@@ -125,15 +87,50 @@ int main(){
         wystapienia[frag]++;
 
         if(CzyJestCiagiemSzesc(liczby, i)) ileCiagow++;
-        pair<string,int> para = CzyJestCiagiem(liczby, i);
-        if(para.first != "0"){
-            cout<<para.second<<endl;
-            cout<<para.first<<endl;
-        }
         
-
-
+        
     }
+
+    int zmiana = 0;
+        int dR = 1;
+        int dM = 1;
+        int dlugosc = 0;
+
+        int maksDlugosc = 0;
+        int maksStart = 0;
+
+    for(int i = 0; i< 10000; i++){
+            dR = 0;
+            dM = 0;
+            zmiana = i;
+
+            for(int j = i; j + 1< 10000 && liczby[j] < liczby[j + 1]; j++){
+                dR++;
+                zmiana = j + 1;
+            }
+
+            for(int j = zmiana; j + 1<10000 && liczby[j] > liczby[j + 1]; j++ ){
+                dM++;
+            }
+
+            if(dM != 1 && dR != 1){
+                dlugosc = dM + dR;
+            }
+
+            if(dlugosc > maksDlugosc){
+                maksStart = i;
+                maksDlugosc = dlugosc;
+            }
+
+
+        }
+
+        cout<<maksStart<<endl;
+        
+        for(int i = maksStart; i <= maksStart + maksDlugosc; i++){
+            cout<<liczby[i];
+        }
+        cout<<endl;
 
     cout<<wieksze<<endl;
 
