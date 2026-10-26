@@ -7,7 +7,7 @@ string Przelicz(string liczba, int system, int nowySystem){
     string nowa;
 
     for(int i{}; i <= len; i++){
-        char c = liczba[len - i];
+        char c = liczba[i];
         int n = (c - '0');
         dzies = dzies * system + n;
     }

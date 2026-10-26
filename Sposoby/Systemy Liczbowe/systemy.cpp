@@ -9,12 +9,9 @@ string Przelicz(string liczba, int system, int nowySystem){
     if(system == 10){
         dzies = stoi(liczba);
     }else{
-        int len = liczba.length() -1 ;
 
-        for(int i = 0; i <= len; i++){
-            char c = liczba[len - i];
-            int n = (c - 48);
-
+        for(char &c: liczba){
+            int n = (c - '0');
             dzies = dzies * system + n;
         }
     }
